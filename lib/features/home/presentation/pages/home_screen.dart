@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ge_wallet/core/platform/app_colors.dart';
 import 'package:ge_wallet/core/platform/app_images.dart';
 import 'package:ge_wallet/core/platform/size_config.dart';
+import 'package:ge_wallet/features/home/presentation/widgets/home_action_list.dart';
 import 'package:ge_wallet/features/home/presentation/widgets/wallet_selector_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -25,6 +26,8 @@ class HomeScreen extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             children: [
               const WalletSelectorWidget(),
+              spacer(),
+              const HomeActionList(),
               spacer(),
             ],
           ),
