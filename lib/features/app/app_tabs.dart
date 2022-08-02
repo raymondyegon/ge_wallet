@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ge_wallet/core/presentation/page_margin.dart';
+import 'package:ge_wallet/features/home/presentation/pages/home_screen.dart';
 
 class AppTabs extends StatefulWidget {
   const AppTabs({Key? key}) : super(key: key);
@@ -19,11 +20,7 @@ class _AppTabsState extends State<AppTabs> {
   @override
   Widget build(BuildContext context) {
     final _pages = <Widget>[
-      Container(
-        child: const Center(
-          child: Text('Home'),
-        ),
-      ),
+      const HomeScreen(),
       Container(
         child: const Center(
           child: Text('exchange'),
