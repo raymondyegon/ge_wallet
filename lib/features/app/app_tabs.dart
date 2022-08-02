@@ -47,7 +47,6 @@ class _AppTabsState extends State<AppTabs> {
       showBottomNav: true,
       selectedIndex: selectedIndex,
       backgroundColor: Colors.white,
-      padding: EdgeInsets.zero,
       onNavItemTap: (int v) {
         if (v != 2) {
           setState(() {
