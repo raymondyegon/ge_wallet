@@ -25,6 +25,15 @@ class _TokenWidgetState extends State<TokenWidget> {
         _searchBar(context),
         spacer(),
         _buildTokenList(context),
+        spacer(),
+        _otherTokens(
+          context: context,
+          title: 'Hidden token (2)',
+        ),
+        _otherTokens(
+          context: context,
+          title: 'Suspicious token (15)',
+        ),
       ],
     );
   }
@@ -147,6 +156,31 @@ Widget _tokentile({
         '$amount',
         style: _sc.h6Theme.copyWith(
           fontWeight: FontWeight.w500,
+        ),
+      ),
+    ),
+  );
+}
+
+Widget _otherTokens({
+  required BuildContext context,
+  required String title,
+}) {
+  final _sc = SizeConfig(context: context);
+
+  return Theme(
+    data: Theme.of(context).copyWith(
+      dividerColor: Colors.transparent,
+    ),
+    child: ExpansionTile(
+      tilePadding: EdgeInsets.zero,
+      childrenPadding: EdgeInsets.zero,
+      collapsedIconColor: AppColors.mediumLightGray,
+      iconColor: AppColors.mediumLightGray,
+      title: AutoSizeText(
+        '$title',
+        style: _sc.body1Theme.copyWith(
+          color: AppColors.mediumLightGray,
         ),
       ),
     ),
