@@ -37,6 +37,12 @@ dependencies:
   # To auto-resize font size
   auto_size_text: ^3.0.0
 
+  # To cache our network images
+  cached_network_image: ^3.0.0
+
+  # To load svg
+  flutter_svg: ^1.0.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

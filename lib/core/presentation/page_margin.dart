@@ -61,7 +61,7 @@ class _PageMarginState extends State<PageMargin> {
                 onTap: (int val) {
                   widget.onNavItemTap!(val);
                 },
-                selectedItemColor: AppColors.strongBlue,
+                selectedItemColor: Colors.black,
                 unselectedItemColor: AppColors.lightGray,
                 type: BottomNavigationBarType.fixed,
                 showUnselectedLabels: false,

@@ -9,7 +9,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) => AnnotatedRegion<SystemUiOverlayStyle>(
         value: const SystemUiOverlayStyle(
           statusBarIconBrightness: Brightness.light, //Android
-          statusBarBrightness: Brightness.dark, //iOS
+          statusBarBrightness: Brightness.light, //iOS
         ),
         child: MaterialApp(
           title: 'Waves Wallet',
