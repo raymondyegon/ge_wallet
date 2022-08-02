@@ -1,6 +1,9 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:ge_wallet/core/platform/app_colors.dart';
 import 'package:ge_wallet/core/platform/app_images.dart';
 import 'package:ge_wallet/core/platform/size_config.dart';
+import 'package:ge_wallet/features/home/presentation/widgets/wallet_selector_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -20,7 +23,10 @@ class HomeScreen extends StatelessWidget {
             padding: EdgeInsets.zero,
             shrinkWrap: true,
             physics: const BouncingScrollPhysics(),
-            children: [],
+            children: [
+              const WalletSelectorWidget(),
+              spacer(),
+            ],
           ),
         ),
       ],
