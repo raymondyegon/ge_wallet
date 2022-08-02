@@ -30,7 +30,7 @@ class WalletSelectorWidget extends StatelessWidget {
             InkWell(
               onTap: () {},
               child: Icon(
-                Icons.swap_vert_outlined,
+                Icons.unfold_more_outlined,
                 color: AppColors.lightGray,
               ),
             ),

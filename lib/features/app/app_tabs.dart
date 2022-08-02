@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ge_wallet/core/presentation/page_margin.dart';
 import 'package:ge_wallet/features/home/presentation/pages/home_screen.dart';
+import 'package:ge_wallet/features/home/presentation/widgets/action_sheet.dart';
 
 class AppTabs extends StatefulWidget {
   const AppTabs({Key? key}) : super(key: key);
@@ -52,7 +53,16 @@ class _AppTabsState extends State<AppTabs> {
           setState(() {
             selectedIndex = v;
           });
-        } else {}
+        } else {
+          showModalBottomSheet(
+            context: context,
+            isScrollControlled: false,
+            enableDrag: true,
+            useRootNavigator: true,
+            backgroundColor: Colors.transparent,
+            builder: (_) => const ActionSheet(),
+          );
+        }
       },
       child: IndexedStack(
         index: selectedIndex,
