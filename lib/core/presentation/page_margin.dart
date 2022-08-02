@@ -63,9 +63,9 @@ class _PageMarginState extends State<PageMargin> {
                 },
                 selectedItemColor: AppColors.strongBlue,
                 unselectedItemColor: AppColors.lightGray,
-                elevation: 0,
                 type: BottomNavigationBarType.fixed,
-                showUnselectedLabels: true,
+                showUnselectedLabels: false,
+                showSelectedLabels: false,
                 backgroundColor: Colors.white,
                 selectedLabelStyle: _sc.body1Theme.copyWith(
                   color: AppColors.strongBlue,
@@ -75,31 +75,42 @@ class _PageMarginState extends State<PageMargin> {
                   color: AppColors.mediumLightGray,
                   inherit: true,
                 ),
-                items: const [
-                  BottomNavigationBarItem(
+                items: [
+                  const BottomNavigationBarItem(
                     icon: Icon(
                       Icons.account_balance_wallet_outlined,
                     ),
+                    label: 'Home',
                   ),
-                  BottomNavigationBarItem(
+                  const BottomNavigationBarItem(
                     icon: Icon(
                       Icons.swap_horiz_outlined,
                     ),
+                    label: 'Swap',
                   ),
                   BottomNavigationBarItem(
-                    icon: Icon(
-                      Icons.add,
+                    icon: Container(
+                      decoration: BoxDecoration(
+                        color: AppColors.strongBlue.withOpacity(0.2),
+                      ),
+                      child: Icon(
+                        Icons.add,
+                        color: AppColors.strongBlue,
+                      ),
                     ),
+                    label: 'Add/ Top Up',
                   ),
-                  BottomNavigationBarItem(
+                  const BottomNavigationBarItem(
                     icon: Icon(
                       Icons.sort_outlined,
                     ),
+                    label: 'Transactions',
                   ),
-                  BottomNavigationBarItem(
+                  const BottomNavigationBarItem(
                     icon: Icon(
                       Icons.settings_outlined,
                     ),
+                    label: 'Settings',
                   ),
                 ],
               )
