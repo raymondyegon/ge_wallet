@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:ge_wallet/core/platform/app_colors.dart';
 import 'package:ge_wallet/core/platform/size_config.dart';
+import 'package:ge_wallet/features/home/presentation/widgets/leasing_widget.dart';
 
 import 'token_widget.dart';
 
@@ -54,7 +55,11 @@ class _HomeViewOptionsState extends State<HomeViewOptions> {
           ],
         ),
         spacer(),
-        const TokenWidget(),
+        Visibility(
+          visible: isTokenActive,
+          child: const TokenWidget(),
+          replacement: const LeasingWidget(),
+        ),
       ],
     );
   }
